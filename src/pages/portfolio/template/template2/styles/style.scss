@@ -1,0 +1,57 @@
+$tab-device: 700px;
+
+.ba1::before,
+.ba1::after {
+  background: white;
+}
+.ba2::before,
+.ba2::after {
+  background: black;
+}
+
+.name {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 2px;
+
+    left: 0;
+    top: 50%;
+    position: absolute;
+
+    @media only screen and (max-width: $tab-device) {
+      width: 50px;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 2px;
+
+    right: 0;
+    top: 50%;
+    position: absolute;
+
+    @media only screen and (max-width: $tab-device) {
+      width: 50px;
+    }
+  }
+}
+
+.gallery {
+  .col-md-3 {
+    padding: 0.35rem;
+    .img-fluid {
+      margin-top: 0.7rem;
+    }
+  }
+}
+
+.bg-dark {
+  background-color: #212121 !important;
+}
